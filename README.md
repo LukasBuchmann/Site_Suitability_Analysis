@@ -60,17 +60,11 @@ To ensure high spatial accuracy, official open geodata from Swiss federal author
 | [**swissTLM3D**](https://www.swisstopo.admin.ch/de/landschaftsmodell-swisstlm3d) | Swisstopo | Roads and Settlements vectors |
 | [**BLN Inventory**](https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/bc3f1564-1e56-44e9-98b6-f0d8c5130410) | Federal Office for the Environment (FOEN) | Protected Areas (Strict exclusion) |
 
+**Note on the QGIS Project File (`.qgz`):** The `.qgz` file is included in this repository to demonstrate the project structure, layer organization, and symbology. However, because the model relies on heavily processed intermediate layers generated locally (such as rasters resampled to 25m resolution and calculated Euclidean distance surfaces), the QGIS project cannot be executed out-of-the-box just by downloading the raw data.
+
+The complete workflow, including all data preprocessing steps and the Map Algebra formulas used to create these intermediate layers, is transparently documented in the full project report.
+
 **Full Project Report:** For a detailed breakdown of the methodology, statistical analysis, and discussion of limitations, please refer to the complete [Project Report PDF](docs/Buchmann_Lukas_Project_Report_GISScience_GDB.pdf) included in the `docs/` folder.
-
----
-
-## How to use this project locally
-Since the heavy raster and vector datasets are excluded from this repository, follow these steps to explore the QGIS project:
-1. Clone this repository to your local machine.
-2. Create a folder named `data/` in the root directory.
-3. Download the necessary datasets from the sources listed above (Swisstopo, BFE, FOEN) and place them in the `data/` folder.
-4. Open the `Wind_Energy_Thurgau.qgz` file in QGIS.
-5. If QGIS prompts you for missing layers, point it to your newly created `data/` folder to repair the data sources.
 
 ---
 
